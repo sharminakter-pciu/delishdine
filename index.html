@@ -3,58 +3,130 @@
   <head>
     <meta charset="UTF-8" />
     <title>Delish Dine | Home</title>
-    <a href="signup.php" class="signup-btn">Sign Up</a>
-
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
         font-family: "Segoe UI", sans-serif;
         background: #fff8f0;
-        margin: 0;
       }
+
+      /* Header Styling */
       header {
-        background: #111;
-        padding: 20px;
+        background: rgba(0, 0, 0, 0.85);
+        padding: 20px 40px;
         color: #fff;
-        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
       }
+
+      header h1 {
+        font-size: 30px;
+        letter-spacing: 1.5px;
+      }
+
       nav a {
         color: #fff;
         text-decoration: none;
-        margin: 0 15px;
+        margin-left: 20px;
         font-weight: bold;
+        transition: 0.3s ease;
       }
+
+      nav a:hover {
+        color: #f4a261;
+      }
+
       nav a.login-btn,
       nav a.signup-btn {
         background-color: #f4a261;
-        padding: 8px 12px;
-        border-radius: 5px;
+        padding: 8px 14px;
+        border-radius: 6px;
         color: black;
+        font-weight: bold;
+        transition: all 0.3s ease;
       }
+
+      nav a.signup-btn:hover,
+      nav a.login-btn:hover {
+        background-color: #fff;
+        color: #111;
+      }
+
+      /* Hero Section */
       .hero {
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092")
+            no-repeat center center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
         text-align: center;
-        padding: 100px 20px;
-        background: #ffeedd;
+        padding: 0 20px;
       }
+
       .hero h1 {
-        font-size: 48px;
-        margin-bottom: 10px;
+        font-size: 60px;
+        margin-bottom: 20px;
+        animation: fadeIn 2s ease-in-out;
       }
+
       .hero p {
-        font-size: 20px;
+        font-size: 22px;
+        animation: fadeIn 2s ease-in-out 0.5s;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 38px;
+        }
+
+        .hero p {
+          font-size: 18px;
+        }
+
+        nav a {
+          margin-left: 10px;
+        }
       }
     </style>
   </head>
+
   <body>
+    <!-- Header -->
     <header>
       <h1>Delish Dine</h1>
       <nav>
         <a href="#">Home</a>
         <a href="login.html" class="login-btn">Login</a>
         <a href="signup.php" class="signup-btn">Sign Up</a>
-        <!-- Link added -->
       </nav>
     </header>
 
+    <!-- Hero Section -->
     <div class="hero">
       <h1>Welcome to Delish Dine</h1>
       <p>Enjoy the taste of happiness.</p>

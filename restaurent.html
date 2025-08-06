@@ -4,55 +4,164 @@
     <meta charset="UTF-8" />
     <title>Delish Dine | Home</title>
     <style>
+      /* Reset and base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
         font-family: "Segoe UI", sans-serif;
         background: #fff8f0;
-        margin: 0;
+        color: #111;
       }
+
+      /* Header */
       header {
         background: #111;
-        padding: 20px;
+        padding: 20px 40px;
         color: #fff;
-        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
+
+      header h1 {
+        font-size: 28px;
+        letter-spacing: 2px;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
       nav a {
         color: #fff;
         text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
+        font-weight: 600;
+        padding: 8px 14px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
       }
+
+      nav a:hover {
+        background-color: #333;
+      }
+
       nav a.login-btn {
         background-color: #f4a261;
-        padding: 8px 12px;
-        border-radius: 5px;
-        color: black;
+        color: #111;
+        font-weight: 700;
       }
+
+      nav a.login-btn:hover {
+        background-color: #e07a3f;
+        color: #fff;
+      }
+
+      /* Hero Section with background image, overlay, and animation */
       .hero {
+        position: relative;
+        height: 80vh;
+        color: white;
         text-align: center;
-        padding: 100px 20px;
-        background: #ffeedd;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 20px;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80")
+            no-repeat center center/cover;
+        animation: bgDrift 20s linear infinite;
       }
+
+      /* Background drifting animation */
+      @keyframes bgDrift {
+        0% {
+          background-position: center center;
+        }
+        50% {
+          background-position: center 20px;
+        }
+        100% {
+          background-position: center center;
+        }
+      }
+
+      /* Floating 3D animation on h1 */
       .hero h1 {
         font-size: 48px;
-        margin-bottom: 10px;
+        margin-bottom: 16px;
+        letter-spacing: 1.5px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        animation: float3d 6s ease-in-out infinite;
+        transform-style: preserve-3d;
       }
+
+      @keyframes float3d {
+        0%,
+        100% {
+          transform: rotateX(0deg) rotateY(0deg) translateZ(0);
+        }
+        25% {
+          transform: rotateX(3deg) rotateY(3deg) translateZ(10px);
+        }
+        50% {
+          transform: rotateX(0deg) rotateY(6deg) translateZ(15px);
+        }
+        75% {
+          transform: rotateX(-3deg) rotateY(3deg) translateZ(10px);
+        }
+      }
+
       .hero p {
-        font-size: 20px;
+        font-size: 22px;
+        color: #f4a261;
+        font-weight: 600;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          padding: 15px 20px;
+          text-align: center;
+        }
+
+        nav {
+          margin-top: 10px;
+          gap: 12px;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .hero h1 {
+          font-size: 36px;
+        }
+
+        .hero p {
+          font-size: 18px;
+        }
       }
     </style>
   </head>
+
   <body>
     <header>
       <h1>Delish Dine</h1>
       <nav>
         <a href="#">Home</a>
-        <a href="login.html" class="login-btn"> Login</a>
+        <a href="login.html" class="login-btn">Login</a>
       </nav>
     </header>
 
-    <div class="hero">
+    <section class="hero">
       <h1>Welcome to Delish Dine</h1>
       <p>Enjoy the taste of happiness.</p>
-    </div>
+    </section>
   </body>
 </html>
