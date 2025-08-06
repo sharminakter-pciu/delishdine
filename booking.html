@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Table Booking</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #fdf6ec;
+        margin: 0;
+      }
+      header {
+        background: #111;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .booking-container {
+        max-width: 500px;
+        margin: 50px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        color: #e76f51;
+        margin-bottom: 20px;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+      button {
+        width: 100%;
+        background: #f4a261;
+        border: none;
+        padding: 12px;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #e76f51;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Book a Table</h1>
+    </header>
+
+    <div class="booking-container">
+      <h2>Reservation Form</h2>
+      <form action="menu.html" method="get">
+        <input type="text" placeholder="Your Name" name="name" required />
+        <input type="email" placeholder="Your Email" name="email" required />
+        <input type="date" name="date" required />
+        <input type="time" name="time" required />
+        <select name="table" required>
+          <option value="">Select Table Number</option>
+          <option value="1">Table 1</option>
+          <option value="2">Table 2</option>
+          <option value="3">Table 3</option>
+        </select>
+        <select name="position" required>
+          <option value="">Select Table Position</option>
+          <option>Window Side</option>
+          <option>Center Hall</option>
+          <option>Outdoor Garden</option>
+          <option>Rooftop</option>
+        </select>
+        <button type="submit">Submit Booking</button>
+      </form>
+    </div>
+  </body>
+</html>

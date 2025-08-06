@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Special Menu | Delish Dine</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #fffaf0;
+        margin: 0;
+      }
+
+      header {
+        background-color: #111;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .thank-you {
+        background: #dfffe0;
+        color: #1e4620;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 30px auto;
+        font-size: 18px;
+        max-width: 700px;
+        text-align: center;
+      }
+
+      .menu-container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      h2 {
+        text-align: center;
+        color: #e76f51;
+        margin-bottom: 30px;
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .menu-item {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .menu-item h3 {
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .menu-item p {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .menu-item span {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #e76f51;
+      }
+
+      .back-home {
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      .back-home a {
+        background: #f4a261;
+        color: black;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+      }
+
+      .back-home a:hover {
+        background: #e76f51;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Special Menu</h1>
+      <p>Only available after booking</p>
+    </header>
+
+    <div class="thank-you">
+      ✅ <strong>Thank you for your reservation!</strong><br />
+      Your table has been booked successfully. Please enjoy our special menu
+      below.
+    </div>
+
+    <div class="menu-container">
+      <h2>Today's Specials</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h3>Royal Butter Chicken</h3>
+          <p>Rich creamy tomato sauce, spices, and tender chicken</p>
+          <span>$14.99</span>
+        </div>
+        <div class="menu-item">
+          <h3>Deluxe Seafood Platter</h3>
+          <p>Grilled prawns, calamari, crab served with lemon dip</p>
+          <span>$22.49</span>
+        </div>
+        <div class="menu-item">
+          <h3>Stuffed Mushroom Steak</h3>
+          <p>Thick juicy steak topped with garlic mushroom stuffing</p>
+          <span>$18.25</span>
+        </div>
+        <div class="menu-item">
+          <h3>Chocolate Lava Cake</h3>
+          <p>Warm chocolate cake with molten center & vanilla scoop</p>
+          <span>$6.99</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="back-home">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Delish Dine | Employee & Menu</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #fffaf0;
+        margin: 0;
+        scroll-behavior: smooth;
+      }
+
+      header {
+        background-color: #111;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      nav {
+        background-color: #e76f51;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      section {
+        padding: 40px 20px;
+        max-width: 900px;
+        margin: auto;
+      }
+
+      h2 {
+        color: #e76f51;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .employee-form {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .employee-form label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+      }
+
+      .employee-form input,
+      .employee-form select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      .employee-form button {
+        background-color: #e76f51;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .employee-form button:hover {
+        background-color: #d45d3c;
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .menu-item {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .menu-item h3 {
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .menu-item p {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .menu-item span {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #e76f51;
+      }
+
+      .back-home {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .back-home a {
+        background: #f4a261;
+        color: black;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+      }
+
+      .back-home a:hover {
+        background: #e76f51;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Delish Dine</h1>
+      <p>Your taste, our passion!</p>
+    </header>
+
+    <nav>
+      <a href="#employee">Employee Form</a>
+      <a href="#menu">Special Menu</a>
+    </nav>
+
+    <!-- Employee Form Section -->
+    <section id="employee">
+      <h2>Employee Registration Form</h2>
+      <!-- Form scrolls to menu after submit -->
+      <form class="employee-form" action="#menu" method="get">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="position">Position</label>
+        <select id="position" name="position" required>
+          <option value="">Select Position</option>
+          <option value="chef">Chef</option>
+          <option value="waiter">Waiter</option>
+          <option value="manager">Manager</option>
+          <option value="cleaner">Cleaner</option>
+        </select>
+
+        <button type="submit">Submit & See Menu</button>
+      </form>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+      <h2>Today's Specials</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h3>Royal Butter Chicken</h3>
+          <p>Rich creamy tomato sauce, spices, and tender chicken</p>
+          <span>$14.99</span>
+        </div>
+        <div class="menu-item">
+          <h3>Deluxe Seafood Platter</h3>
+          <p>Grilled prawns, calamari, crab served with lemon dip</p>
+          <span>$22.49</span>
+        </div>
+        <div class="menu-item">
+          <h3>Stuffed Mushroom Steak</h3>
+          <p>Thick juicy steak topped with garlic mushroom stuffing</p>
+          <span>$18.25</span>
+        </div>
+        <div class="menu-item">
+          <h3>Chocolate Lava Cake</h3>
+          <p>Warm chocolate cake with molten center & vanilla scoop</p>
+          <span>$6.99</span>
+        </div>
+      </div>
+
+      <div class="back-home">
+        <a href="#">↑ Back to Top</a>
+      </div>
+    </section>
+  </body>
+</html>
